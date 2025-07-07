@@ -85,62 +85,64 @@ local Tab = Window:Tab({Title = "Main", Icon = "star"}) do
 
     -- Dropdown
     Tab:Dropdown({
-        Title = "Choose Option",
+        Title = "Choose Option", Options",
         List = {"Option 1", "Option 2", "Option 3"},
-        Value = "Option 1",
+        Value = "Option 1",},
+        Multi = true, -- bật multiple select
         Callback = function(choice)
-            print("Selected:", choice)
-        end
-    })
+            print("Selected:", choice) print("Selected (multi):", table.concat(choices, ", "))
+        end  end
+    })    })
 
     -- Code Display
-    local CodeBlock = Tab:Code({
+    local CodeBlock = Tab:Code({{
         Title = "Example Code",
-        Code = "-- This is a code preview\nprint('Hello world')"
-    })
+        Code = "-- This is a code preview\nprint('Hello world')"  Code = "-- This is a code preview\nprint('Hello world')"
+    })    })
 
     -- Simulate update
     task.delay(5, function()
-        CodeBlock:SetCode("-- Updated!\nprint('New content loaded')")
-    end)
-end
+        CodeBlock:SetCode("-- Updated!\nprint('New content loaded')")CodeBlock:SetCode("-- Updated!\nprint('New content loaded')")
+    end) end)
+endend
 
--- Line Separator
-Window:Line()
+-- Line Separatorator
+Window:Line()Window:Line()
 
 -- Another Tab Example
-local Extra = Window:Tab({Title = "Extra", Icon = "tag"}) do
-    Extra:Section({Title = "About"})
+local Extra = Window:Tab({Title = "Extra", Icon = "tag"}) doxtra", Icon = "tag"}) do
+    Extra:Section({Title = "About"}){Title = "About"})
     Extra:Button({
         Title = "Show Message",
-        Desc = "Display a popup",
-        Callback = function()
+        Desc = "Display a popup",up",
+        Callback = function()()
             Window:Notify({
                 Title = "Fluent UI",
-                Desc = "Everything works fine!",
-                Time = 3
-            })
-        end
-    })
+                Desc = "Everything works fine!",Everything works fine!",
+                Time = 3  Time = 3
+            }) })
+        end  end
+    }) })
 end
 Window:Line()
-local Extra = Window:Tab({Title = "Settings", Icon = "wrench"}) do
-    Extra:Section({Title = "Config"})
+local Extra = Window:Tab({Title = "Settings", Icon = "wrench"}) dottings", Icon = "wrench"}) do
+    Extra:Section({Title = "Config"}){Title = "Config"})
     Extra:Button({
         Title = "Show Message",
-        Desc = "Display a popup",
-        Callback = function()
+        Desc = "Display a popup",up",
+        Callback = function()()
             Window:Notify({
                 Title = "Fluent UI",
-                Desc = "Everything works fine!",
-                Time = 3
-            })
-        end
-    })
+                Desc = "Everything works fine!",Everything works fine!",
+                Time = 3  Time = 3
+            }) })
+        end  end
+    }) })
 end
--- Final Notification
+-- Final Notificationcation
 Window:Notify({
     Title = "x2zu",
-    Desc = "All components loaded successfully! Credits leak: @x2zu",
-    Time = 4
-})
+    Desc = "All components loaded successfully! Credits leak: @x2zu",All components loaded successfully! Credits leak: @x2zu",
+    Time = 4  Time = 4
+})})
+

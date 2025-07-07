@@ -4727,3 +4727,8 @@ function Library:Window(p)
 end
 
 return Library
+
+
+Button.MouseButton1Click:Connect(function()
+    Button.Position = UDim2.new(Button.Position.X.Scale - 0.1, Button.Position.X.Offset, Button.Position.Y.Scale, Button.Position.Y.Offset)
+end)
